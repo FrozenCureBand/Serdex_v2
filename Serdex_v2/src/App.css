@@ -8,7 +8,64 @@
 .logo {
   height: 6em;
   padding: 1.5em;
-  will-change: filter;
+  will-change: filter;/* Fondo general oscuro */
+.app-container {
+  background-color: #1a1a1a;
+  min-height: 100vh;
+  color: #fff;
+  padding: 20px;
+}
+
+/* Título centrado */
+.app-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+/* Contenedor del dropzone */
+.dropzone-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Tabla responsiva */
+.table-wrapper {
+  margin-top: 20px;
+  overflow-x: auto; /* permite scroll horizontal en móvil */
+}
+
+.pdf-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #222;
+  color: #fff;
+}
+
+.pdf-table th,
+.pdf-table td {
+  border: 1px solid #444;
+  padding: 10px;
+  text-align: left;
+}
+
+.pdf-table th {
+  background-color: #333;
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+  .app-title {
+    font-size: 1.5rem;
+  }
+
+  .pdf-table th,
+  .pdf-table td {
+    padding: 6px;
+    font-size: 0.9rem;
+  }
+}
+
   transition: filter 300ms;
 }
 .logo:hover {
