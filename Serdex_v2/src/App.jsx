@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import './App.css'
 import PdfDropzone from './components/PdfDropzone';
-import * as pdfjsLib from 'pdfjs-dist/build/pdf';
-import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.entry';
+import * as pdfjsLib from "pdfjs-dist";
+import workerSrc from "pdfjs-dist/build/pdf.worker.mjs";
 
-pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;
+pdfjsLib.GlobalWorkerOptions.workerSrc = workerSrc;
 
 function App() {
   const [pdfFiles, setPdfFiles] = useState([])
